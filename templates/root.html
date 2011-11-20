@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Andrew Halligan - {% block title %}{% endblock %} - Copyright &copy; 2011</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+{% block includes %}
+<style>
+.white-shadow {
+    -moz-border-radius: 6px;
+    border-radius: 6px;    
+    -moz-box-shadow: 0 0 1px 1px #444;
+    -webkit-box-shadow: 0 0 1px 1px #444;
+    box-shadow: 0 0 1px 1px #444;
+}
+</style>
+{% endblock %}
+</head>
+<body style="padding-top: 40px;">
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="container">
+            <h3><a href="/portfolio">andrew.coop</a></h3>
+            <ul class="nav">
+                <li {% block nav_home %}{% endblock %}><a href="/portfolio">Home</a></li>
+                <li {% block nav_blog %}{% endblock %}><a href="/portfolio/blog"><span class="label success">New!</span> Blog </a></li>
+                <li {% block nav_contact %}{% endblock %}><a href="/portfolio/contact">Contact</a></li>
+            </ul>
+            <ul style="margin-top: -5px; margin-bottom: -7px; float: right;" class="nav">
+                <li><a href="http://ca.linkedin.com/pub/andrew-halligan/39/18/362"><img class="white-shadow" src="/static/images/LinkedIn.png"></a></li>
+                <li><a href="https://plus.google.com/117815539341633167555"><img class="white-shadow" src="/static/images/GooglePlus.png"></a></li>
+                <li><a href="https://github.com/nearlyfreeapps"><img class="white-shadow" src="/static/images/Github.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% block main %}
+{% endblock %}
+</body>
+</html>
+
