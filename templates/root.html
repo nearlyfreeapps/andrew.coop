@@ -4,8 +4,11 @@
 <title>Andrew Halligan - {% block title %}{% endblock %} - Copyright &copy; 2011</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
-{% block includes %}
 <style>
+body {
+    background-color: #d9e5f2;
+    padding-top: 40px;   
+}
 .white-shadow {
     -moz-border-radius: 6px;
     border-radius: 6px;    
@@ -14,9 +17,10 @@
     box-shadow: 0 0 1px 1px #444;
 }
 </style>
+{% block includes %}
 {% endblock %}
 </head>
-<body style="background-color: #d9e5f2; padding-top: 40px;">
+<body>
 <div class="topbar"> 
     <div class="topbar-inner">
         <div class="container">
