@@ -5,6 +5,13 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
 <style>
+footer {
+    border-top: 0px;
+    text-align: left;
+}
+.footer {
+    border-top: 1px solid #FFF;
+}
 body {
     background-color: #d9e5f2;
     padding-top: 40px;   
@@ -40,6 +47,28 @@ body {
 </div>
 {% block main %}
 {% endblock %}
+
+<div class='footer'>
+    <div class="container">
+    <footer>
+        <div class="row">
+        <span class='span5 copyright'>
+            &copy; 2011 Andrew Halligan - All rights reserved.
+        </span>
+        <span class="span1">
+        <a href="/portfolio">Home</a>
+        </span>
+        <span class="span1">
+        <a href="/portfolio/blog">Blog</a>
+        </span>
+        <span class="span1">
+        <a href="/portfolio/contact">Contact</a>
+        </span>
+        </div>
+    </footer>
+    </div>
+</div>
+
 </body>
 </html>
 
