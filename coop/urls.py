@@ -5,5 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('coop.views',
     url(r'^$', 'index'),
+    url(r'^contact$', 'contact'),
 )
 

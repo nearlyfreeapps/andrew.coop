@@ -1,0 +1,55 @@
+{% extends 'root.html' %}
+
+{% block title %}Portfolio Index{% endblock %}
+{% block includes %}
+<style>
+.container {
+    text-align: center;
+}
+</style>
+{% endblock %}
+{% block nav_contact %}class="active"{% endblock %}
+{% block main %}
+<div class="container">
+<div style="text-align: justify; padding-top: 25px; padding-bottom: 25px;" class="row">
+    <div class="span10">
+        <div class="page-header"><h2>Contact</h2></div>
+        <p><i>I am always available to chat so feel free to contact me using any of the methods listed below.</i></p>
+        <p><h4>Cell Phone</h4> 905-269-1342</p>
+        <p><h4>Email</h4> ahalliga at uoguelph.ca</p>
+            <h4>Direct Message Form</h4>
+            <div class="span12">
+            {% if sent %}
+            <div class="alert-message success">
+                <p><strong>Message sent!</strong> Thanks for your feedback</p>
+            </div>
+            {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <fieldset>
+                {% for field in form.visible_fields %}
+                    <div class="clearfix {% if field.errors %}error{% endif %}">
+                        {{ field.label_tag }}
+                        <div class="input">
+                            {{ field }}
+                            {% if form.errors %}
+                            <div style="padding: 5px;" class="help inline"> 
+                                {% for error in field.errors %}
+                                    {{ error|escape }}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div style="background-color: #d9e5f2;border-top: 0px;" class="actions">
+                    <input type="submit" class="btn primary" value="Send">&nbsp;<button type="reset" class="btn">Cancel</button>
+                </div>
+                </fieldset>
+            </form>
+            </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
