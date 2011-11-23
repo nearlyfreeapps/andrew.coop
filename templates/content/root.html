@@ -1,0 +1,36 @@
+{% extends 'root.html' %}
+
+{% block includes %}
+<style>
+.container {
+    text-align: center;
+}
+</style>
+{% endblock %}
+{% block main %}
+<div class="container">
+    <div style="text-align: left; padding-top: 25px; padding-bottom: 25px;" class="row">
+    <div class="page-header">
+        <h2>{{ organization_name }}</h2>
+    </div>
+    <div class="row">
+    <div class="span14">
+        <ul class="tabs">
+            <li {% block tab_employer_info %}{% endblock %}><a href="/portfolio/{{ organization_id }}">Employer Information</a></li>
+            <li {% block tab_job_desc %}{% endblock %}><a href="/portfolio/{{ organization_id }}/job">Job Description</a></li>
+            <li {% block tab_goals %}{% endblock %}><a href="/portfolio/{{ organization_id }}/goals">Goals</a></li>
+            <li {% block tab_coop_exp %}{% endblock %}><a href="/portfolio/{{ organization_id }}/experience">Coop Experience</a></li>
+            <li {% block tab_acknowledgments %}{% endblock %}><a href="/portfolio/{{ organization_id }}/acknowledgments">Acknowledgments</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="row">
+        <div class="span14">
+            {% block main_content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+

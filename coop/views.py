@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from portfolio.coop.forms import ContactForm
+from coop.forms import ContactForm
 
 def index(request):
     return render_to_response('coop/index.html')    
