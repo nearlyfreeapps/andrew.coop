@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^portfolio/', include('coop.urls')),
     url(r'^portfolio/voiceonthego/', include('voiceonthego.urls')),
+    url(r'^portfolio/polarmobile/', include('polarmobile.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
 
