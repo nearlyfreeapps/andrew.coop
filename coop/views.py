@@ -2,9 +2,12 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from coop.forms import ContactForm
+from blog.models import Blog
 
 def index(request):
-    return render_to_response('coop/index.html')    
+    return render_to_response('coop/index.html', {
+        'blog_posts': Blog.objects.all().order_by('-date')[:3]
+    }, RequestContext(request))    
 
 def contact(request):
     sent = False
