@@ -51,14 +51,14 @@
         <p style="margin-top: 5px;">Voice On The Go is a privately held corporation that was founded in 2005 and is currently a leader in speech-to-text and text-to-speech technologies, particularly in the mobile application space.</p>
         <p><a class="btn" href="/portfolio/voiceonthego">Read about my experience &raquo;</a></p>
     </div>
-    <div class="span6">
+    <div class="span5">
         <h3>Recent Blog Posts</h3>
-        <p>
+        <div>
             {% for post in blog_posts %}
-                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.date }}
+                <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a>
+                <div style="border-bottom: 1px solid #CCC;margin-bottom:5px;color:#777;font-size: 10px;"><strong>By: </strong>{{ post.author.first_name }} {{ post.author.last_name }} - {{ post.date }}</div>
             {% endfor %}
-        </p>
+        </div>
         <p><a class="btn" href="/portfolio/blog">Read more &raquo;</a></p>
     </div>
 </div>

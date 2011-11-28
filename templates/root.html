@@ -2,8 +2,9 @@
 <html>
 <head>
 <title>Andrew Halligan - {% block title %}{% endblock %} - Copyright &copy; 2011</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<script src="/media/admin/js/jquery.min.js"></script>
 <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
 <style>
 footer {
     border-top: 0px;
@@ -32,12 +33,20 @@ body {
 {% endblock %}
 </head>
 <body>
-<div class="topbar"> 
+<div class="topbar" data-dropdown="dropdown"> 
     <div class="topbar-inner">
         <div class="container">
             <h3><a href="/portfolio">andrew.coop</a></h3>
             <ul class="nav">
                 <li {% block nav_home %}{% endblock %}><a href="/portfolio">Home</a></li>
+                <li {% block nav_experience %}{% endblock %} class="dropdown">
+                    <a href="#" class="dropdown-toggle">Experience</a>
+                    <ul class="dropdown-menu">
+                        <li style="text-align: left;"><a href="/portfolio/polarmobile">Polar Mobile</a></li>
+                        <li class="divider"></li>
+                        <li style="text-align: left;"><a href="/portfolio/voiceonthego">Voice On The Go</a></li>
+                    </ul>
+                </li>
                 <li {% block nav_blog %}{% endblock %}><a href="/portfolio/blog"><span class="label success">New!</span> Blog </a></li>
                 <li {% block nav_contact %}{% endblock %}><a href="/portfolio/contact">Contact</a></li>
             </ul>
