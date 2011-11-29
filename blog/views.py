@@ -4,11 +4,6 @@ from django.http import HttpResponseBadRequest
 
 from blog.models import Blog
 
-def blog(request):
-    return render_to_response('blog/index.html', {
-
-    }, RequestContext(request))
-
 def blog_article(request, object_id):
     try:
         article = Blog.objects.get(pk = object_id)
