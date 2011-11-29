@@ -1,0 +1,28 @@
+{% extends 'root.html' %}
+
+{% block includes %}
+<style>
+.container {
+    text-align: center;
+}
+</style>
+{% endblock %}
+{% block nav_blog %}class="active"{% endblock %}
+{% block main %}
+<div class="container">
+    <div style="text-align: left; padding-top: 25px; padding-bottom: 25px;" class="row">
+    <div class="page-header">
+        <h2>{{ article.title }}</h2>
+        <div style="color: #777;"><strong>By:</strong> {{ article.author.first_name }} {{ article.author.last_name }} - {{ article.date }}</div>
+    </div>
+    <div class="row">
+        <div class="span14">
+            {% autoescape off %}
+            {{ article.content }}
+            {% endautoescape %}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+

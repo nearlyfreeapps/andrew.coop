@@ -11,11 +11,11 @@ def blog(request):
 
 def blog_article(request, object_id):
     try:
-        article = Blog.objects.filter(pk = object_id)
-    except:
+        article = Blog.objects.get(pk = object_id)
+    except Blog.DoesNotExist:
         return HttpResponseBadRequest('Article %s does not exist' % object_id)
 
-    return render_to_response('blog/article.html'), {
-
+    return render_to_response('blog/article.html', {
+        'article': article
     }, RequestContext(request))
 

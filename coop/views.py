@@ -1,12 +1,13 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from coop.forms import ContactForm
 from blog.models import Blog
+from coop.models import Organization
+from coop.forms import ContactForm
 
 def index(request):
     return render_to_response('coop/index.html', {
-        'blog_posts': Blog.objects.all().order_by('-date')[:3]
+        'blog_posts': Blog.objects.order_by('-date')[:3]
     }, RequestContext(request))    
 
 def contact(request):

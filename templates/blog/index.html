@@ -39,19 +39,19 @@
 </div>
 <div class="container">
 <div style="text-align: justify; padding-top: 25px; padding-bottom: 25px;" class="row">
-    {% for organization in organizations %}
     <div class="span5">
-        <h3>{{ organization.name }} <span class="label success">Work Term #{{ organization.term_number }}</span></h3>
-        <span><i>{{ organization.start_date|date:"N Y" }} - {{ organization.end_date|date:"N Y" }} ({{ organization.get_month_duration }} Months)</i></span>
-        <p style="margin-top: 5px;">
-        {{ organization.blurb }}
-        </p> 
-        <p>
-            <a class="btn" href="{{ organization.get_absolute_url }}">Read about my experience &raquo;</a></p>
-        </p>
+        <h3>Polar Mobile <span class="label success">Work Term #2</span></h3>
+        <span><i>Sept 2011 - Dec 2011 (4 Months)</i></span>        
+        <p style="margin-top: 5px;">Polar Mobile is a global leader in helping media companies distribute and monetize content on mobile devices. Their vision is to enable the next-generation media experience by making mobile fast, easy and effective.</p>
+        <p><a class="btn" href="/portfolio/polarmobile">Read about my experience &raquo;</a></p>
     </div>
-    {% endfor %}
-    <div class="span6">
+    <div class="span5">
+        <h3>Voice On The Go <span class="label success">Work Term #1</span></h3>
+        <span><i>May 2011 - Aug 2011 (4 Months)</i></span>
+        <p style="margin-top: 5px;">Voice On The Go is a privately held corporation that was founded in 2005 and is currently a leader in speech-to-text and text-to-speech technologies, particularly in the mobile application space.</p>
+        <p><a class="btn" href="/portfolio/voiceonthego">Read about my experience &raquo;</a></p>
+    </div>
+    <div class="span5">
         <h3>Recent Blog Posts</h3>
         <div>
             {% for post in blog_posts %}

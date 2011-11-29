@@ -42,9 +42,10 @@ body {
                 <li {% block nav_experience %}{% endblock %} class="dropdown">
                     <a href="#" class="dropdown-toggle">Experience</a>
                     <ul class="dropdown-menu">
-                        <li style="text-align: left;"><a href="/portfolio/polarmobile">Polar Mobile</a></li>
-                        <li class="divider"></li>
-                        <li style="text-align: left;"><a href="/portfolio/voiceonthego">Voice On The Go</a></li>
+                        {% for organization in organizations %}
+                            <li style="text-align: left;"><a href="{{ organization.get_absolute_url }}">{{ organization.name }}</a></li>
+                            {% if not forloop.last %}<li class="divider"></li>{% endif %}
+                        {% endfor %}
                     </ul>
                 </li>
                 <li {% block nav_blog %}{% endblock %}><a href="/portfolio/blog"><span class="label success">New!</span> Blog </a></li>
