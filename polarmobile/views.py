@@ -19,8 +19,8 @@ def goals(request):
         'organization_id': 'polarmobile'         
     }, context_instance = RequestContext(request))
 
-def experience(request):
-    return render_to_response('polarmobile/experience.html', {
+def technology(request):
+    return render_to_response('polarmobile/technology.html', {
         'organization_name': 'Polar Mobile',
         'organization_id': 'polarmobile'         
     }, context_instance = RequestContext(request))
