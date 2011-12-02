@@ -2,5 +2,27 @@
 {% block title %}{{ organization_name }} Technology{% endblock %}
 {% block tab_coop_exp %}class="active"{% endblock %}
 {% block main_content %}
+<p>
+<h4>Technology</h4>
+During my coop work term at Polar Mobile I got the chance to use some impressive technologies and frameworks that make development not only easier but also fun. This was one of the best things about my coop term this semester and is one of the things that I brag about most often. It certainly opened my eyes to the fact that there is not one specific tool that fits every job. I thought it would be beneficial and useful to outline some of them below that I got a chance to become familiar with.<br><br>
+
+<h5>Python</h5>
+When I arrived at Polar Mobile, my python skills were sub-par to say the least. I knew the generic structure of the language from a single assignment at school but it was evident that we barely scratched the surface. Python is a programming language that boasts allowing its developers to work more quickly and build systems effectively. Having worked with it for the past 4 months, I can absolutely vouch for this. Python is very pluggable and encourages modular design and as such I am using it frequently in any personal projects that I see fit.
+
+<h5>Django</h5>
+Django is a framework built on top of python that allows one to create clean, solid web applications in a rapid fashion. Having built web applications before, I was well aware of many of the pain points for developers. Settings up database connections and building generic forms and templates is quite simply something that no one really wants to spend time on. Django gets rid of this by allowing the develop to focus on the core components of the application rather than the tedious ones. I found that after I was introduced to Django, I started to enjoy developing web applications again. In fact, this entire new coop portfolio website is built with Django.
+
+<h5>Redis</h5>
+Redis is a popular No-SQL database that Polar Mobile uses. It is an open source and advanced key-value store that can house strings, lists, sets, hashes etc. In doing my research, I was surprised to hear the kind of performance gains associated with using Redis. One interesting project that I used Redis for was when I was writing a feature that integrated with SVN to import and subsequently export a repository using a button click in a web application. Redis was used as the intermediate job queue in conjunction with the next technology to handle the job code.
+
+<h5>Resque</h5>
+Resque is a background job system developed by GitHub that is based on Redis. It allows the developer to turn existing Ruby classes into job code that can be placed on different queues and executed later. For my project, I actaully used a clone of Resque for python which is called Pyres. As an organization, Polar Mobile has contributed a lot to the open source Pyres project as they have used it in a variety of projects. Pyres was an excellent solution that I used to combat issues of page response time taking too long while performing heavy tasks (such as dispatching daily notification e-mails).
+
+<h5>Git</h5>
+I was familiar with verison control prior to working at Polar Mobile having used SVN at school and CVS at my previous work placement. However, I never really took to either of those solutions and always found that it was more of a pain to commit my code. Git seemed to solve the issues that I had before. Github makes collaboration and code review incredibly easy. I am now a big advocate of Git and the Git-Flow branching structure that Polar Mobile uses. I am now using Git for my personal projects including this <a href="https://github.com/nearlyfreeapps/andrew.coop">coop portfolio</a>.
+
+<h5>Buildout</h5>
+Buildout is an extremely handy system for creating, assembling and deploying applications. Essentially, one can write these "recipes" that will grab an assortment of dependencies and components required for a given project. This is at the basis of every software project that Polar Mobile creates and allows anyone in nearly any environment to grab a project from source control and get it up and running locally very quickly. One of my first real projects was to package up projects using this methodology and the merit was immediately apparent.
+</p>
 {% endblock %}
 
