@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 265, 
+        "model": "coop.organization", 
+        "fields": {
+            "name": "Polar Mobile", 
+            "end_date": "2011-12-23", 
+            "short_name": "polarmobile", 
+            "term_number": 2, 
+            "start_date": "2011-09-06", 
+            "blurb": "Polar Mobile is a global leader in helping media companies distribute and monetize content on mobile devices. Their vision is to enable the next-generation media experience by making mobile fast, easy and effective."
+        }
+    }, 
+    {
+        "pk": 236, 
+        "model": "coop.organization", 
+        "fields": {
+            "name": "Voice On The Go", 
+            "end_date": "2011-08-26", 
+            "short_name": "voiceonthego", 
+            "term_number": 1, 
+            "start_date": "2011-05-02", 
+            "blurb": "Voice On The Go is a privately held corporation that was founded in 2005 and is currently a leader in speech-to-text and text-to-speech technologies, particularly in the mobile application space."
+        }
+    }
+]

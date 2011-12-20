@@ -1,0 +1,34 @@
+{% extends 'content/root.html' %}
+{% block title %}{{ organization_name }} Job Description{% endblock %}
+{% block tab_job_desc %}class="active"{% endblock %}
+{% block main_content %}
+<h4>Job Description - Junior Operations Developer</h4>
+The Operations team at Polar Mobile is in charge of ensuring that all internal and external services are up and running with maximum efficiency and simplicity. As a Junior Operations Developer, I had the task of helping to build and maintain software based tools that would not only aid the employees of Polar Mobile, but also the customer and end-user. I had the great privilege of working with a small but dedicated group of individuals which served to enhance my learning experience on several projects. Below I will give an overview of several of these projects that I got a chance to work on as my work term progressed.<br><br>
+
+<h4>Packaging</h4>
+When I first arrived at Polar Mobile, I certainly felt overwhelmed with all of the information that I was to go through in order to become versed on the architecture that makes up the organization. As my first few projects, I was assigned to package up ("Buildoutify") a variety of tools that had yet to be changed over to the new structure requirements. During this time, I found that I was doing a lot of reading to accquaint myself with Git, Polar's version control system, and Buildout, a neat system for distributing various software packages. 
+
+<h4>Analytics Reporting</h4>
+<div>
+<div style="margin: 10x;" class="pull-right">
+    <img src="/static/images/webtrends.png">
+</div>
+After I was finished the initial packaging projects and had proved myself, I was given the task of fixing up some of the analytics reporting tools that were currently in use. Essentially I had to do some refactoring and upgrading of various third party analytics APIs (one of which used by Polar Mobile is WebTrends) to their current version to support new services that customer's had been requesting. At first, my thoughts were that upgrading the APIs would not be too difficult but it turned out that proper documentation from the third party sources was lacking, to say the least. While working on this particular project I also got to expand the command line interface for the tool to include dispatching report e-mails in text or xml formats to those who were specified at runtime.</div>
+
+<h4>Landing Page Project</h4>
+<div>
+<img style="margin: 5px; border: 1px solid #000;" class="pull-right" src="/static/images/LandingPageProject.png">
+Having completed my work on the analytics reporting tools, my next job was to add various features to the landing page project. To explain it briefly, each mobile application developed by Polar Mobile also has a web presence that allows end users to check compatability, route to appropriate app stores for download, and get support should they have any issues. I was quite excited to be working on this since it is a customer and end-user facing product.<br><br>
+
+My first assignment for this project was to add tablet support on both the backend and the frontend. This was how I became exposed to Django that I later relied on heavily. On the backend, I created database models for both the iPad and Blackberry Playbook in order to house information such as app store screenshots and availability. On the frontend, I got to work directly with one of Polar Mobile's graphic designers to refresh and organize the interface to include the tablet platforms. Later I also returned to this project to add features that include custom device shells in the template and orderable screenshots, as requested by various clients.
+</div>
+
+<h4>Atlas</h4>
+Atlas is the one project that I spent the majority of my time on, and also that of which I likely enjoyed and learned the most. Previously at Polar Mobile, the sales and deployment team mainly used an enormous, multi-page spreadsheet in order to track their applications and customers. While this may have worked earlier in the company's history, it was certainly not a scalable solution. Atlas set out to change all of that as a web-based tool to track everything surrounding the deployment process including customers, applications, clients and releases.<br><br>
+
+One very nice thing about this project was that it started fresh with me at the forefront. I got to be involved in the initial planning sessions and carry that through to implementation. I got to apply rapid design prototyping, much of which I used when creating this coop portfolio. There were several features that I got to work on that I consider to be notable. Some of these include "visual-search" based querying for data, a recent history timeline view, an application screenshot gallery, daily batch notifications, a drag and drop interface for moving various clients through internal procedures and a client configuration area. Today, Atlas is a full-featured application that is being used actively amongst the team and has received great feedback.<br><br>
+
+In reflection, one of the best aspects of my role at Polar Mobile was being able to work on such a variety of projects and assignments that meant there was rarely a dull moment. Coming into this placement, I likely wouldn't have been able to accomplish half of what I outlined above and looking back it is obvious that I gained many skills on the job. My planning and problem solving skills were greatly developed as well as my attention to detail which I now know, can make or break a given project.
+
+{% endblock %}
+
