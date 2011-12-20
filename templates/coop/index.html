@@ -1,0 +1,67 @@
+{% extends 'root.html' %}
+
+{% block title %}Portfolio Index{% endblock %}
+{% block includes %}
+<style>
+.container {
+    text-align: center;
+}
+.text-shadow {
+    color: #FFF;
+    text-shadow: 0px 1px 1px #000;
+}
+.jumbotron {
+    text-align: center;
+    height: 249px;
+    background:url('/static/images/jumbotron-bg.png') repeat-x right top;
+    -moz-box-shadow: 1px 1px 10px #999;
+    -webkit-box-shadow: 1px 1px 10px #999;
+    box-shadow: 1px 1px 10px #999;
+}
+</style>
+{% endblock %}
+{% block nav_home %}class="active"{% endblock %}
+{% block main %}
+<div class="jumbotron">
+    <div class="container">
+        <div style="padding-top: 15px;" class="row">
+        <span class="span10 text-shadow"><div style="text-align: justify;">
+        <h1 class="text-shadow" style="text-align:justify;">Andrew Halligan</h2>
+        <h2 class="text-shadow" style="text-align:justify;">Software Developer - Coop Experience Portfolio<br><br></h3>
+        Hello and welcome. My name is Andrew Halligan. I am currently attending the University of Guelph and I have just finished my second year of a Bachelor of Computing degree, specializing in Computer Science. I have a strong interest in mobile software development, entrepreneurship and I am pursuing a minor in Economics.</div><br>
+        <br></span>
+        <span class="span6">
+            <img src="/static/images/AndrewHalligan.png">
+            <a class="btn success" href="/portfolio/contact">Questions or Comments?</a>
+        </span>    
+       </div>
+    </div>
+</div>
+<div class="container">
+<div style="text-align: justify; padding-top: 25px; padding-bottom: 25px;" class="row">
+    {% for organization in organizations %}
+    <div class="span5">
+        <h3>{{ organization.name }} <span class="label success">Work Term #{{ organization.term_number }}</span></h3>
+        <span><i>{{ organization.start_date|date:"N Y" }} - {{ organization.end_date|date:"N Y" }} ({{ organization.get_month_duration }} Months)</i></span>
+        <p style="margin-top: 5px;">
+        {{ organization.blurb }}
+        </p> 
+        <p>
+            <a class="btn" href="{{ organization.get_absolute_url }}">Read about my experience &raquo;</a></p>
+        </p>
+    </div>
+    {% endfor %}
+    <div class="span6">
+        <h3>Recent Blog Posts</h3>
+        <div>
+            {% for post in blog_posts %}
+                <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a>
+                <div style="border-bottom: 1px solid #CCC;margin-bottom:5px;color:#777;font-size: 10px;"><strong>By: </strong>{{ post.author.first_name }} {{ post.author.last_name }} - {{ post.date }}</div>
+            {% endfor %}
+        </div>
+        <p><a class="btn" href="/portfolio/blog">Read more &raquo;</a></p>
+    </div>
+</div>
+</div>
+{% endblock %}
+

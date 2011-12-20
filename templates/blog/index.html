@@ -1,0 +1,43 @@
+{% extends 'root.html' %}
+
+{% block title %}Blog{% endblock %}
+{% block includes %}
+<style>
+.container {
+    text-align: center;
+}
+</style>
+{% endblock %}
+{% block nav_blog %}class="active"{% endblock %}
+{% block main %}
+<div class="container">
+    <div style="text-align: justify; padding-top: 25px; padding-bottom: 25px;" class="row">
+        {% for article in object_list %}
+            <div class="page-header span14">
+                 <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+            <div style="color: #777;"><strong>By:</strong> {{ article.author.first_name }} {{ article.author.last_name }} - {{ article.date }}</div>
+            </div>
+            <div class="span14">{{ article.content|slice:"225" }}...</div>
+            <div class="span14">
+                <div class="pull-right"><a class="btn" href="{{ article.get_absolute_url }}">Continue Reading &raquo;</a></div>
+            </div>
+        {% endfor %}
+    </div>
+    {% if is_paginated %}
+    <div class="row">
+        <div class="span14">
+            <div class="pagination">
+                <ul>
+                    <li class="prev {% if not page_obj.has_previous %}disabled"><a href="#">&larr; Previous</a>{% else %}"><a href="/portfolio/blog?page={{ page_obj.previous_page_number }}">&larr; Previous</a>{% endif %}</li>
+                    {% for page in paginator.page_range %}
+                        <li {% if page_obj.number == page %}class="active"{% endif %}><a href="/portfolio/blog?page={{ page }}">{{ page }}</a>
+                    {% endfor %}
+                    <li class="next {% if not page_obj.has_next %}disabled"><a href="#">Next &rarr;</a>{% else %}"><a href="/portfolio/blog?page={{ page_obj.next_page_number }}">Next &rarr;</a>{% endif %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+

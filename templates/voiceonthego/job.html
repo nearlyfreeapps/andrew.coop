@@ -1,0 +1,35 @@
+{% extends 'content/root.html' %}
+{% block title %}{{ organization_name }} Job Description{% endblock %}
+{% block tab_job_desc %}class="active"{% endblock %}
+{% block main_content %}
+<p>
+		<img src="/static/images/SoftwareDeveloper.png" border="0" alt="Software Developer" style="float:right; margin-left: 10px;">		<h4>Job Description - Mobile Software Developer</h4>
+
+Throughout the course of my work placement, I was tasked with developing and building various iPhone applications all encompassing voice-to-text and text-to-voice technologies.  I had the privilege of working directly with Voice On The Go's iPhone developer, which proved to be invaluable when grasping all internal processes and current projects. Below I will give an overview of the key products and assignments that I worked on as the semester progressed.<br><br>
+<h4>Email Sourcing</h4>
+
+When I first arrived at Voice On The Go, I was assigned to assist their iPhone developer with creating a more scalable version of their product DriveCarefully. An initial version of this product did already exist on the market however the application relied heavily on the backend infrastructure. The main desired function that was requested was that all email sourcing and dispatch was conducted on the device itself. As with many other things on the iPhone any sort of functionality like this is explicitly locked down in the SDK so we had to rely on developing this ourselves.<br><br> 
+
+During this time, I learned a lot about the creation and usage of external libraries in applications and their importance. We managed to find an open source and unmaintained barebones implementation of IMAP and SMTP. After much headache we did end up using this after refining nearly every aspect of it and implementing POP3 from scratch.<br><br>
+
+<h4>Voice Recognition</h4>
+
+After email sourcing on the device was complete, I was given the opportunity to work on voice command recognition on a mobile device. The real goal was to enable users to reply and compose email messages all by using simple voice prompts. In my initial research, I was fairly overwhelmed by what seemed like such an enormous undertaking. Luckily, there were several open source C libraries that seemed to accomplish what we needed. Having a heavy C background, thanks to my academic studies, certainly paid off at this stage. The majority of my time was spent stitching together these libraries into simple and modular APIs for use not only in the current product but also many to come.  <br><br>
+
+<h4>Feature Addition</h4>
+
+One thing that I enjoyed in particular about my coop work term placement was that we were allowed a great amount of creative freedom. After using our products so frequently in testing, many different features began to brew. A lot of time was spent adding new features to the already existing solid base that we developed. Just to mention a few: different swipe gestures, multiple account support, silence detection etc.<br><br>
+
+<h4>White Label Applications</h4>
+<img style="float:right;padding-left:20px;padding-bottom:20px;" src="/static/images/WhiteLabels.png" border="0" alt="White Label Applications">
+Once the polished version of our application existed with voice reply and compose features, we started to get requests from certain clients that wanted to distribute the application under their brand. Each client required different features, languages, and graphics. Much time was spent preparing the initial build so that it was easy for us to fulfill these requirements for not only the current clients but any future clients to come as well. This was an important realization for me. Initially, I was so concerned with getting the core functionality built that I was not overly concerned with how easily the application would scale once complete. This taught me to always be forward looking when approaching any given project.<br><br>
+
+<h4>Testing</h4>
+
+If there was one thing that the majority of my time was spent on it would be testing. Third party libraries, new features or memory leaks, you name it, I feel like I tested it. If I could make an estimate I would say that 75% of my time was spent debugging and ensuring that everything functioned as it should. I had the chance to work with a lot of cool technologies but the testing skills that I acquired are probably what I will take with me from this experience. I definitely think that this will play back into my academic studies throughout my University career and greatly enhance any project that I undertake from here on out.<br><br>
+
+In reflection, one of the best aspects of my role at Voice On The Go was being able to take a project from concept and see it to complete integration. I feel that this is not something that can be experienced anywhere you go. In all honesty, I came into this placement thinking that I was quite familiar with the iPhone OS and SDK but I picked up so many skills on the job that are unobtainable elsewhere. Not only did my code style and ability become stronger but also my problem solving and debugging skills were greatly advanced.<br><br>
+</p>
+
+{% endblock %}
+

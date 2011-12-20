@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Andrew Halligan - {% block title %}{% endblock %} - Copyright &copy; 2011</title>
+<script src="/media/admin/js/jquery.min.js"></script>
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
+<style>
+footer {
+    border-top: 0px;
+    text-align: left;
+}
+.footer {
+    border-top: 1px solid #FFF;
+    -moz-box-shadow: inset 0 10px 15px -15px #999;
+    -webkit-box-shadow: inset 0px 10px 15px -15px #999;
+    box-shadow: inset 0px 10px 15px -15px #999;
+}
+body {
+    background-color: #d9e5f2;
+    background-color: #f3f3f3;
+    padding-top: 40px;   
+}
+.white-shadow {
+    -moz-border-radius: 6px;
+    border-radius: 6px;    
+    -moz-box-shadow: 0 0 1px 1px #444;
+    -webkit-box-shadow: 0 0 1px 1px #444;
+    box-shadow: 0 0 1px 1px #444;
+}
+</style>
+{% block includes %}
+{% endblock %}
+</head>
+<body>
+<div class="topbar" data-dropdown="dropdown"> 
+    <div class="topbar-inner">
+        <div class="container">
+            <h3><a href="/portfolio">andrew.coop</a></h3>
+            <ul class="nav">
+                <li {% block nav_home %}{% endblock %}><a href="/portfolio">Home</a></li>
+                <li {% block nav_experience %}{% endblock %} class="dropdown">
+                    <a href="#" class="dropdown-toggle">Experience</a>
+                    <ul class="dropdown-menu">
+                        {% for organization in organizations %}
+                            <li style="text-align: left;"><a href="{{ organization.get_absolute_url }}">{{ organization.name }}</a></li>
+                            {% if not forloop.last %}<li class="divider"></li>{% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li {% block nav_blog %}{% endblock %}><a href="/portfolio/blog"><span class="label success">New!</span> Blog </a></li>
+                <li {% block nav_contact %}{% endblock %}><a href="/portfolio/contact">Contact</a></li>
+            </ul>
+            <ul style="margin-top: -5px; margin-bottom: -10px; float: right;" class="nav">
+                <li><a href="http://ca.linkedin.com/pub/andrew-halligan/39/18/362"><img class="white-shadow" src="/static/images/LinkedIn.png"></a></li>
+                <li><a href="https://plus.google.com/117815539341633167555"><img class="white-shadow" src="/static/images/GooglePlus.png"></a></li>
+                <li><a href="https://github.com/nearlyfreeapps"><img class="white-shadow" src="/static/images/Github.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% block main %}
+{% endblock %}
+
+<div class='footer'>
+    <div class="container">
+    <footer>
+        <div class="row">
+        <span class='span5 copyright'>
+            &copy; 2011 Andrew Halligan - All rights reserved.
+        </span>
+        <span class="span1">
+            <a href="/portfolio">Home</a>
+        </span>
+        <span class="span1">
+            <a href="/portfolio/blog">Blog</a>
+        </span>
+        <span class="span1">
+            <a href="/portfolio/contact">Contact</a>
+        </span>
+        <span style="padding-left: 15px;" class="span1">
+            <a href="#">Top</a>
+        </span>
+        </div>
+    </footer>
+    <br>
+    </div>
+</div>
+
+</body>
+</html>
+
