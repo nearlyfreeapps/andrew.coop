@@ -1,0 +1,41 @@
+{% extends 'root.html' %}
+
+{% block title %}500 Error{% endblock %}
+{% block includes %}
+<style>
+.container {
+    text-align: center;
+}
+.text-shadow {
+    color: #FFF;
+    text-shadow: 0px 1px 1px #000;
+}
+.jumbotron {
+    text-align: center;
+    height: 249px;
+    background:url('/static/images/jumbotron-bg.png') repeat-x right top;
+    -moz-box-shadow: 1px 1px 10px #999;
+    -webkit-box-shadow: 1px 1px 10px #999;
+    box-shadow: 1px 1px 10px #999;
+}
+</style>
+{% endblock %}
+{% block main %}
+<div class="jumbotron">
+    <div class="container">
+        <div style="padding-top: 15px;" class="row">
+        <span class="span10 text-shadow"><div style="text-align: justify;">
+        <h1 class="text-shadow" style="text-align:justify;">500 - Internal Server Error</h2>
+        <h2 class="text-shadow" style="text-align:justify;">Something serious is going down. Looks like I messed up. Please let me know.
+<br><br></h3></div><br>
+        <br></span>
+                <span class="span6">
+            <img src="/static/images/Error.png">
+            <div><a class="btn success" href="/portfolio/contact">Contact me now</a></div>
+        </span>
+
+       </div>
+    </div>
+</div>
+{% endblock %}
+
