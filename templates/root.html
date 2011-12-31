@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Andrew Halligan - {% block title %}{% endblock %} - Copyright &copy; 2011</title>
+<title>Andrew Halligan - {% block title %}{% endblock %} - Copyright &copy; {% now "Y" %}</title>
 <script src="/media/admin/js/jquery.min.js"></script>
 <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
 <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
@@ -67,7 +67,7 @@ body {
     <footer>
         <div class="row">
         <span class='span5 copyright'>
-            &copy; 2011 Andrew Halligan - All rights reserved.
+            &copy; {% now "Y" %} Andrew Halligan - All rights reserved.
         </span>
         <span class="span1">
             <a href="/portfolio">Home</a>
